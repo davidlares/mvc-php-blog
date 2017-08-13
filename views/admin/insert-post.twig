@@ -1,0 +1,58 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+	<h1>DavidPress - Admin (new Post)</h1>
+	<br>
+		<p>
+			<a href="{{ 'admin/posts' | url }}">Back to Posts</a>
+				</p>
+
+				{% if errors %}	
+					{% include('partials/errors.twig') %}
+				{% endif %}	
+				
+				{% if result %}	
+				<div class="alert alert-success">Post Saved!</div>
+				{% endif %}	
+
+			
+				<br>
+
+					<form method="POST" onsubmit="return validateForm()">
+						<div class="form-group">
+							<label for="inputTitle">Title</label>
+							<input type="text" class="form-control" id="inputTitle" name="title">
+						</div>
+						<div class="form-group">
+							<label for="inputImg">Image</label>
+							<input type="text" class="form-control" id="inputImg" name="img">
+						</div>
+						<div class="form-group">
+							<textarea name="content" id="inputContent" rows="5" class="form-control"></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" class="btn btn-success" value="Add New Post">
+						</div>
+					</form>
+
+{% endblock %}
+
+{% block js %}
+	<script>
+		function validateForm() {
+			var title = document.getElementById('inputTitle').value.trim();
+			// trim elimina espacios blancos y saltos de linea
+			
+			if(title == ''){
+				swal({
+				  title: "Oops!",
+				  text: "Title is required",
+				  type: "error",
+				  confirmButtonText: "Cool"
+				});
+				return false;
+			}
+		}
+	</script>
+{% endblock %}

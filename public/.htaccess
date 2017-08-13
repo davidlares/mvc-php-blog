@@ -1,0 +1,9 @@
+# nos va a ayudar para setear ciertas configs para que Apache pueda responder diferente a nuestras aplicaciones
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f 
+# agarra los archivos del request y confirma si es un archivo o no
+RewriteCond ${REQUEST_FILENAME} !-d
+# agarra los archivos del request y confirma si es un directorio o no
+RewriteRule ^(.*)$ index.php?route=$1
+# cualquier cosa que llegue a nuestra base, mandalo a Router (index.php)

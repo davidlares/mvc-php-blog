@@ -1,0 +1,18 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+	<h2> Dashboard </h2>
+	<p> Welcome {{user.name}}!</p>
+	<ul>
+		<li>
+			<a href="{{'admin/posts' | url}}">Manage Posts</a>
+		</li>
+		<li>
+			<a href="{{'admin/users' | url}}">Manage Users</a>
+		</li>
+		<li>
+			<a href="{{'auth/logout' | url}}">Log Out</a>
+		</li>
+	</ul>
+
+{% endblock %}

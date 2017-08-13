@@ -1,0 +1,36 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+	<h2>Posts</h2>
+		<a href="{{ 'admin' | url }}" class="">Back to Dashboard</a>
+		<br><br>
+		<a href="{{ 'admin/posts/create' | url }}" class="btn btn-primary">New Post</a>
+		<br><br>
+			<table class="table bordered">
+				<tr>
+					<th>Title</th>
+					<th class="text-center">Edit</th>
+					<th class="text-center">Delete</th>
+				</tr>
+
+
+				{% for blogPost in blogPosts %}
+					<tr>
+						<td>{{ blogPost.title }}</td>
+						<td class="text-center">
+							<a href="{{ 'admin/posts/edit/' | url }}{{blogPost.id}}">
+								Edit
+							</a>
+						</td>
+						<td class="text-center">
+							<a href="{{'admin/posts/delete/' | url }}{{blogPost.id}}">
+								<button type="button" class="badge">Delete</button>
+							</a>
+						</td>
+					</tr>
+				{% endfor %}
+
+			</table>
+
+{% endblock %}
