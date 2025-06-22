@@ -9,11 +9,11 @@ DavidPress es un blog customizado desarrollado con PHP 7 sin uso de ningun frame
 - PHRoute (StandAlone Router)
 - SiriusPHP (Form Validation)
 - Monolog (Implementacion de Logs sencillos)
-- DotENV (Enviroment credentials)
+- DotENV (Environment credentials)
 
 
 ## Créditos
-- [David Lares](https://twitter.com/@davidlares3)
+- [David Lares](https://davidlares.com)
 
 ## Licencia
 
