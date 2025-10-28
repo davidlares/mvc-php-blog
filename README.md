@@ -1,19 +1,18 @@
-## DavidPress
+## PHP Blog MVC
 
-DavidPress es un blog customizado desarrollado con PHP 7 sin uso de ningun framework. Proyecto de ejemplo de integración de paquetes de terceros en un ambiente PHP
+This is a custom blog developed with PHP 7 without any framework. This is a sample project for integrating third-party packages into a PHP environment.
 
-## Paquetes PHP Usados
+## PHP Packages Used
 
 - Twig (Rendering Template)
-- ORM Eloquent (Database ORM)
-- PHRoute (StandAlone Router)
+- Eloquent ORM (Database ORM)
+- PHRoute (Stand-Alone Router)
 - SiriusPHP (Form Validation)
-- Monolog (Implementacion de Logs sencillos)
-- DotENV (Environment credentials)
+- Monolog (Simple Logging Implementation)
+- DotENV (Environment Credentials)
 
+## Credits
+[David Lares S](https://davidlares.com)
 
-## Créditos
-[David E Lares S](https://davidlares.com)
-
-## Licencia
+## License
 [MIT](https://opensource.org/licenses/MIT)
